@@ -17,10 +17,18 @@
   </properties>
    <build>
     <plugins>
-      <plugin>
+     <plugin>
       <groupId>org.jacoco</groupId>
       <artifactId>jacoco-maven-plugin</artifactId>
       <version>0.5.5.201112152213</version>
+	  <jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
+
+     <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco-maven-plugin.version}</version>
+    
+
       <configuration>
          <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
          <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
@@ -40,8 +48,9 @@
          </goals>
        </execution>
       </executions>
+	  </plugin>
      </plugin>
-    </plugins>
+     </plugins>
   </build>
 
 
